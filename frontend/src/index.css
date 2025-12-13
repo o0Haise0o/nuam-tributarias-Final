@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; 
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  background: linear-gradient(to top, #e9520c60 0%, #ffffff 50%);
+  
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  
+  color: #d86c39; 
+}
+
+html, #root { height: 100%; }
+
+
+@layer components {
+  .container-app { @apply mx-auto max-w-7xl px-6; }
+
+  .card { @apply rounded-2xl border border-slate-200 bg-white/90 backdrop-blur-sm shadow-sm; }
+  
+  .card-body { @apply p-5; }
+  .card-title { @apply text-lg font-semibold; }
+
+  .btn { @apply inline-flex items-center gap-2 rounded-xl px-3.5 py-2.5 text-sm font-medium transition shadow-sm; }
+  
+  .btn-primary { @apply btn bg-orange-600 text-white hover:bg-orange-700 border-none; }
+  .btn-outline { @apply btn border border-orange-600 text-orange-700 hover:bg-orange-50; }
+  .btn-ghost { @apply btn text-slate-600 hover:bg-slate-100; }
+
+  .nav-link { @apply px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100; }
+  .nav-link-active { @apply text-orange-700 bg-orange-50; }
+
+  .table { @apply min-w-full text-sm; }
+  .th { @apply text-left font-semibold text-slate-600 border-b border-slate-200 py-2; }
+  .td { @apply border-b border-slate-100 py-2; }
+}
