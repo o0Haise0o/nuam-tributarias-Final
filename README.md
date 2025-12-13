@@ -76,6 +76,13 @@ Desde la carpeta raíz del repositorio ('nuam-tributarias/'):
    VITE_API_URL=https://localhost:8000/api
    EOF
 
+7. Crear Superusuario Automático (Copie y pegue):
+   # Este comando crea el usuario 'pepe' automáticamente para entrar al admin
+   echo "from django.contrib.auth import get_user_model; User = get_user_model(); User.objects.filter(username='pepe').exists() or User.objects.create_superuser('pepe', 'pepelotudo@hotmail.com', 'pepelotudo2')" | python manage.py shell
+
+   # NOTA: Credenciales de acceso:
+   # Usuario: pepe
+   # Password: pepelotudo2
 ==============================================================================
 PASO 3: CONFIGURACIÓN DEL FRONTEND (REACT)
 ==============================================================================
